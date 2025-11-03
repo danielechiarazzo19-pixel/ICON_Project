@@ -1,0 +1,9 @@
+# Cartella dell'ambiente virtuale
+venv/
+
+# Cache di Python
+__pycache__/
+*.pyc
+
+# File di configurazione di VS Code (se lo usi)
+.vscode/

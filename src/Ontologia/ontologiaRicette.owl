@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/danie/ontologies/2025/9/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/danie/ontologies/2025/9/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/danie/ontologies/2025/9/untitled-ontology-2/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Carboidrato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingrediente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Latticino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrimoPiatto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RicettaVegetariana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RicettaVeloce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ricette"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecondoPiatto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TecnicaDiCottura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Verdura"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Ricetta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#TecnicaDiCottura"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#haIngrediente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usaTecnica"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haDifficolta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ingrediente_Lattuga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ingrediente_Pasta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ingrediente_Pomodoro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ingrediente_Uova"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Carboidrato"/>
+        <Class IRI="#Ingrediente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carne"/>
+        <Class IRI="#Ingrediente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Latticino"/>
+        <Class IRI="#Ingrediente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrimoPiatto"/>
+        <Class IRI="#Ricette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RicettaVegetariana"/>
+        <Class IRI="#Ricette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RicettaVeloce"/>
+        <Class IRI="#Ricette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecondoPiatto"/>
+        <Class IRI="#Ricette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Verdura"/>
+        <Class IRI="#Ingrediente"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Verdura"/>
+        <NamedIndividual IRI="#Ingrediente_Lattuga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Carboidrato"/>
+        <NamedIndividual IRI="#Ingrediente_Pasta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Verdura"/>
+        <NamedIndividual IRI="#Ingrediente_Pomodoro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ingrediente"/>
+        <NamedIndividual IRI="#Ingrediente_Uova"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RicettaVegetariana"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RicettaVeloce"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PrimoPiatto"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RicettaVegetariana"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RicettaVeloce"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RicettaVeloce"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SecondoPiatto"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+        <NamedIndividual IRI="#Ingrediente_Lattuga"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+        <NamedIndividual IRI="#Ingrediente_Pomodoro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+        <NamedIndividual IRI="#Ingrediente_Pasta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+        <NamedIndividual IRI="#Ingrediente_Uova"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+        <Literal>Lavare e tagliare le verdure, unire in una ciotola e condire.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haDifficolta"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <NamedIndividual IRI="#Insalata_Mista"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+        <Literal>Bollire l&apos;acqua, cuocere la pasta, scaldare il sugo di pomodoro e unire.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <NamedIndividual IRI="#PastaAlPomodoro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+        <Literal>Rompere le uova in una ciotola, sbattere con sale e pepe, cuocere in padella mescolando.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haDifficolta"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <NamedIndividual IRI="#UovaStrapazzate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Ricetta"/>
+        <Class IRI="#Ricette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#TecnicaDiCottura"/>
+        <Class IRI="#Ricette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <Class IRI="#Ricette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#usaTecnica"/>
+        <Class IRI="#Ricette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Ricetta"/>
+        <Class IRI="#Ingrediente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#TecnicaDiCottura"/>
+        <Class IRI="#Ingrediente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#haIngrediente"/>
+        <Class IRI="#Ingrediente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#usaTecnica"/>
+        <Class IRI="#Ingrediente"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+        <Class IRI="#Ricette"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haDifficolta"/>
+        <Class IRI="#Ricette"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <Class IRI="#Ricette"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#haDescrizionePassaggi"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haDifficolta"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#haTempoPreparazioneMinuti"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
