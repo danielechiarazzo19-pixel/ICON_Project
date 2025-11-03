@@ -47,8 +47,8 @@ Studente
 
 Nome: Daniele
 Cognome: Chiarazzo
-Matricola: 744000
-Email istituzionale: d.chiarazzo@studenti.uniba.it
+Matricola: 736585
+Email istituzionale: d.chiarazzo1@studenti.uniba.it
 
 Repository GitHub:
 https://github.com/danielechiarazzo19-pixel/ICON_Project
