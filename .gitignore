@@ -6,4 +6,4 @@ __pycache__/
 *.pyc
 
 # File di configurazione di VS Code (se lo usi)
-.vscode/
+.vscode/".idea/" 
