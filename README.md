@@ -1,50 +1,124 @@
-# Progetto ICON 24/25
+Consulente Intelligente per Ricette e Pianificazione Pasti
 
-## Presentazione
+Questa repository contiene il progetto realizzato per l’esame di Ingegneria della Conoscenza (ICON).
+Il sistema sviluppato fornisce consulenze culinarie intelligenti, suggerendo ricette compatibili con gli ingredienti disponibili, le preferenze alimentari e il tempo a disposizione dell’utente.
 
-Questa repository contiene il progetto realizzato per l'esame di Ingegneria della Conoscenza.  
-Il sistema esperto sviluppato integra due componenti principali:
+Architettura del Sistema
 
-1. **Motore a Regole:** Utilizza la libreria *experta* per guidare l’interazione con l’utente, raccogliendo informazioni relative alle condizioni meteorologiche e alle preferenze per le attività.
-2. **Rete Bayesiana:** Implementata con *pgmpy* e *bnlearn*, la rete calcola, tramite inferenza e apprendimento da dataset, la probabilità di insoddisfazione o rischio dovuto a condizioni climatiche avverse. Il sistema può aggiornare automaticamente le tabelle di probabilità condizionata (CPD) in base a dati reali, garantendo una stima più precisa man mano che vengono integrati nuovi dati.
+Il progetto integra tre componenti principali di Ingegneria della Conoscenza:
 
-La documentazione completa del progetto è disponibile nel file:  
-```Documentazione_acarrisi.pdf```
+Sistema Esperto (Experta)
+Utilizza un motore a regole basato su forward chaining per guidare l’interazione con l’utente.
+Raccoglie ingredienti, tempo e preferenze alimentari, e determina le possibili ricette compatibili.
+In caso di più risultati, chiede all’utente di scegliere; in caso di nessuna corrispondenza, attiva il modulo ontologico.
 
-Studente:
+Ontologia (Owlready2)
+Implementata in OWL tramite Protégé e gestita in Python con Owlready2.
+Fornisce una base di conoscenza strutturata sulle ricette, consentendo:
 
-* Nome: Alessandro
-* Cognome: Carrisi
-* Matricola: 736830
-* Email istituzionale: a.carrisi3@studenti.uniba.it
+il recupero di dettagli e descrizioni;
 
-## Installare i Requisiti
+la ricerca parziale (fallback) quando non si trovano match perfetti.
 
-Installa tutte le librerie necessarie elencate nel file **requisiti.txt** eseguendo il comando seguente nella directory del file ```requisiti.txt```:
+Rete Bayesiana (bnlearn)
+Valuta la probabilità di successo della ricetta suggerita in base a tempo e difficoltà.
+Il sistema permette due modalità di inferenza:
 
-```pip install -r requisiti.txt```
+Default (a priori) → CPT definite manualmente in base alla conoscenza esperta.
 
-Se, in ambiente Windows, dovessi ricevere errori, prova ad eseguire:
+Apprendimento da dataset (a posteriori) → stima automatica delle probabilità condizionate da un file CSV.
 
-```python.exe -m pip install -r requisiti.txt```
+Documentazione
 
-Nel caso in cui, durante l’installazione, si verifichi il seguente errore:
-```
-  File "percorsoAlFile/__init__.py", line 16, in <module>
-    class frozendict(collections.Mapping):
+La documentazione completa è disponibile nel file:
+Documentazione_Progetto_ICON_DanieleChiarazzo.docx
+
+Include:
+
+Descrizione dei moduli e delle librerie;
+
+Struttura logica del sistema;
+
+Esempi di esecuzione e valutazione;
+
+Analisi dei risultati del modello bayesiano.
+
+Studente
+
+Nome: Daniele
+Cognome: Chiarazzo
+Matricola: 744000
+Email istituzionale: d.chiarazzo@studenti.uniba.it
+
+Repository GitHub:
+https://github.com/danielechiarazzo19-pixel/ICON_Project
+
+Installazione dei Requisiti
+
+Assicurati di avere installato Python 3.10+.
+Installa tutte le librerie necessarie elencate in requisiti.txt con il comando:
+
+pip install -r requisiti.txt
+
+
+Se riscontri errori su Windows, prova con:
+
+python.exe -m pip install -r requisiti.txt
+
+Possibili Errori Durante l’Installazione
+
+Se durante l’installazione compare un errore simile a:
+
 AttributeError: module 'collections' has no attribute 'Mapping'
-```
+
 
 segui questi passaggi:
-1. Apri il file __init__.py del pacchetto indicato.
-2. Trova la riga: class frozendict(collections.Mapping)
-3. Modificala in: class frozendict(collections.abc.Mapping)
 
-## Avviare il Sistema
-Per avviare il sistema esperto, esegui il comando:
+Apri il file __init__.py del pacchetto indicato nel messaggio di errore.
 
-```python main.py```
+Trova la riga:
 
-Assicurati di eseguire il comando dalla directory in cui si trova il file ```main.py```.
+class frozendict(collections.Mapping)
 
 
+Modificala in:
+
+class frozendict(collections.abc.Mapping)
+
+Avvio del Sistema
+
+Per avviare il consulente intelligente:
+
+python main.py
+
+
+Durante l’esecuzione, il sistema:
+
+Raccoglie ingredienti, tempo e preferenze.
+
+Suggerisce una o più ricette compatibili.
+
+Esegue una valutazione probabilistica tramite la rete bayesiana.
+
+In caso di mancata corrispondenza, propone alternative tramite ontologia.
+
+Modalità di Test
+
+Puoi anche testare direttamente la valutazione Bayesiana con:
+
+python valutazione.py
+
+Struttura della Repository
+ICON_Project/
+│
+├── main.py                       # Avvio del sistema esperto completo
+├── valutazione.py                # Modulo per testare la rete bayesiana
+├── sistema_esperto.py            # Motore inferenziale Experta
+├── ontologia.py                  # Gestione e interrogazione ontologia
+├── bayesiana.py                  # Costruzione e inferenza rete bayesiana
+│
+├── dataset_ricette.csv           # Dataset per l’apprendimento delle CPT
+├── ontologiaRicette.owl          # File OWL dell’ontologia
+│
+├── requisiti.txt                 # Librerie richieste
+└── Documentazione_Progetto_ICON_DanieleChiarazzo.docx  # Documentazione completa
